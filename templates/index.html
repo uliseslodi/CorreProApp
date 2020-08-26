@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+        <div class="wrapper">
+          
+          <h2>Lista de tiempos</h2>
+          
+          <table class="table">
+            <thead>
+              <tr class="row">
+                <th scope="col">Nombre</th>
+                <th scope="col">Tiempo</th>
+                <th scope="col">Carrera</th>
+              </tr>
+            </thead>
+            
+            <tbody>
+                {% for c in corredores %}
+                  <tr>
+                    <td>{{c.nombre}}</td>
+                    <td>{{c.tiempo}}</td>
+                    <td>{{c.carrera}}</td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% block content %}
+
+<p>Ingrese su nombre completo y el tiempo en minutos realizado en la carrera.</p>
+
+<form method="POST" class="form-style-7">
+        <ul>
+            <li>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" maxlength="100" required>
+                <span>Ingrese su nombre completo</span>
+            </li>
+            <li>
+                <label for="time">Tiempo</label>
+                <input type="time" name="number" step="0.001" maxlength="100" required>
+                <span>Ingrese el tiempo de su carrera</span>
+            </li>
+            <li>
+                <label for="name">Carrera</label>
+                <select name="carrera">
+                    <option value="10K">10K</option>
+                    <option value="21K">21K</option>
+                </select>
+                <span>Ingrese la carrera que corrió</span>
+                </li>
+            <li>
+                <input type="submit" value="Enviar" >
+            </li>
+        </ul>
+</form>
+
+{% endblock %}
